@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Consecuencias - Bombardeo a La Moneda (1973)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #1a1a1a;
+            --color-secondary: #333333;
+            --color-accent: #8b0000; /* Rojo oscuro para acentos */
+            --color-light: #f4f4f4;
+            --color-text: #2d2d2d;
+            --color-text-muted: #666666;
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Open Sans', sans-serif;
+            --max-width: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+
+        /* --- Encabezado y Navegación --- */
+        header {
+            background-color: var(--color-primary);
+            color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.2rem;
+        }
+
+        /* --- Seccion Hero --- */
+        .hero {
+            background-color: var(--color-secondary);
+            color: #ffffff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--color-accent);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #dddddd;
+        }
+
+        /* --- Contenido Principal --- */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            text-align: justify;
+        }
+
+        /* --- Cuadrícula de Impactos --- */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 4px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        /* --- Línea de Tiempo / Hitos Inmediatos --- */
+        .timeline-section {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        .timeline-section h2 {
+            font-family: var(--font-heading);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--color-accent);
+            padding-left: 0.75rem;
+        }
+
+        .timeline {
+            list-style: none;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid #e0e0e0;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.95rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        /* --- Pie de Página --- */
+        footer {
+            background-color: var(--color-primary);
+            color: #888888;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #bbbbbb;
+            text-decoration: none;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">11.09.1973</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-ataque.html">El Ataque</a></li>
+                    <li><a href="consecuencias.html" class="active">Las Consecuencias</a></li>
+                    <li><a href="memoria.html">Memoria</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Encabezado Principal -->
+    <section class="hero">
+        <h1>Las Consecuencias del Bombardeo</h1>
+        <p>El impacto político, social y patrimonial que transformó la historia de Chile tras la destrucción del Palacio de La Moneda.</p>
+    </section>
+
+    <!-- Contenido Central -->
+    <main>
+        <p class="intro-text">
+            El 11 de septiembre de 1973 marca un quiebre estructural en la historia republicana de Chile. El ataque aéreo y terrestre sobre el Palacio de La Moneda no solo culminó con el fin del gobierno de la Unidad Popular y la muerte del presidente Salvador Allende, sino que dio inicio a una dictadura militar de 17 años liderada por la Junta Militar.
+        </p>
+
+        <!-- Secciones de Impacto -->
+        <div class="impact-grid">
+            <article class="card">
+                <h3>Instauración de la Dictadura</h3>
+                <p>Se disolvió el Congreso Nacional, se declararon proscritos los partidos políticos y se estableció el estado de sitio. La Junta Militar asumió el poder Ejecutivo y Legislativo, dando paso a una profunda reestructuración del Estado.</p>
+            </article>
+
+            <article class="card">
+                <h3>Derechos Humanos</h3>
+                <p>Tras la toma del palacio de gobierno, se inició una sistemática política de represión a través de organismos de inteligencia. Miles de personas fueron detenidas, ejecutadas, exiliadas o pasaron a integrar las listas de detenidos desaparecidos.</p>
+            </article>
+
+            <article class="card">
+                <h3>Destrucción Patrimonial</h3>
+                <p>El bombardeo causó un incendio de gran magnitud que destruyó parte importante del diseño neoclásico original de Joaquín Toesca, consumiendo documentos históricos, obras de arte y actas fundamentales de la República.</p>
+            </article>
+        </div>
+
+        <!-- Línea de Tiempo de los Hechos Inmediatos -->
+        <section class="timeline-section">
+            <h2>Efectos Inmediatos (Septiembre de 1973)</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <span class="timeline-date">11 de Septiembre (Tarde)</span>
+                    <p>Fuerzas militares toman el control total del Palacio de La Moneda en ruinas y se confirma la muerte del presidente Salvador Allende.</p>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">11 de Septiembre (Noche)</span>
+                    <p>Se transmite el primer bando oficial de la Junta de Gobierno integrada por Augusto Pinochet, José Toribio Merino, Gustavo Leigh y César Mendoza.</p>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">12-18 de Septiembre</span>
+                    <p>Se decreta toque de queda permanente en todo el territorio nacional y se inician detenciones masivas en el Estadio Nacional y Estadio Chile.</p>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">1974 - 1981</span>
+                    <p>Inicia el proceso de reconstrucción del Palacio de La Moneda, manteniéndolo cerrado hasta su reinauguración oficial en marzo de 1981.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; Sitio Educativo e Histórico sobre el Bombardeo a La Moneda (1973).</p>
+        <p><a href="index.html">Volver al inicio</a> | <a href="memoria.html">Siguiente: Memoria y Archivo &rarr;</a></p>
+    </footer>
+
+</body>
+</html>
