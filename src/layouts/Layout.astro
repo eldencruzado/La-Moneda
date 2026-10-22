@@ -1,0 +1,69 @@
+---
+import '../css/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Golpe de Estado 1973" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <div class="nav-container">
+          <div class="logo">11.09.1973</div>
+          <nav>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/ataque">El Ataque</a></li>
+              <li><a href="/consecuencias">Consecuencias</a></li>
+              <li><a href="/memoria">Memoria</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Contenido dinámico de cada página -->
+      <slot />
+
+      <!-- Pie de página global -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-info">
+            <p class="copyright">
+              &copy; {new Date().getFullYear()} Proyecto Histórico 11 de Septiembre. Todos los derechos reservados.
+            </p>
+            <p class="disclaimer">
+              Sitio web educativo e informativo sobre el golpe de Estado y el bombardeo a La Moneda de 1973.
+            </p>
+          </div>
+
+          <div class="footer-social">
+            <span class="social-title">Síguenos en redes</span>
+            <div class="social-links">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><polygon points="10 15 15 12 10 9 10 15" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Memoria y Derechos Humanos">
+  <!-- Cabecera temática con fondo sobrio -->
+  <section class="hero hero-memoria">
+    <div class="hero-badge">DERECHOS HUMANOS Y DIGNIDAD</div>
+    <h1>Memoria, Verdad y Reparación</h1>
+    <p>El valor inestimable de recordar para garantizar el "Nunca Más" en las futuras generaciones.</p>
+  </section>
+
+  <main>
+    <!-- Cita solemne -->
+    <blockquote class="cita-memorial">
+      «La memoria no es para quedarse en el pasado, es para iluminar el presente y construir un futuro donde la dignidad humana sea innegociable.»
+    </blockquote>
+
+    <p class="intro-text">
+      Preservar la memoria histórica permite reflexionar sobre la democracia, la reparación a las víctimas y el respeto incondicional a los derechos fundamentales.
+    </p>
+
+    <!-- Galería con aspecto de Placas de Memoria -->
+    <div class="impact-grid">
+      <article class="card card-memorial">
+        <span class="card-tag">Sitio de Memoria</span>
+        <h3>Museo de la Memoria y los DD.HH.</h3>
+        <p>Espacio público dedicado a visibilizar las violaciones a los Derechos Humanos cometidas entre 1973 y 1990, promoviendo la reflexión ética.</p>
+      </article>
+
+      <article class="card card-memorial">
+        <span class="card-tag">Patrimonio Histórico</span>
+        <h3>Villa Grimaldi y Londres 38</h3>
+        <p>Antiguos centros clandestinos de detención reconvertidos hoy en parques y espacios de educación cívica y conmemoración.</p>
+      </article>
+
+      <article class="card card-memorial">
+        <span class="card-tag">Garantía de No Repetición</span>
+        <h3>Archivos de la Dignidad</h3>
+        <p>Recopilación de testimonios, informes de comisiones de verdad (Rettig y Valech) e iniciativas de reparación a las víctimas.</p>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* --- ESTILOS EXCLUSIVOS DE MEMORIA --- */
+  .hero-memoria {
+    background: linear-gradient(135deg, #1f1f24 0%, #111115 100%);
+    border-bottom: 4px solid #c9a050; /* Tono cálido / dorado sobrio */
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background-color: rgba(201, 160, 80, 0.15);
+    color: #e0b868;
+    border: 1px solid #c9a050;
+    padding: 0.25rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .cita-memorial {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #4a4a4a;
+    border-left: 4px solid #c9a050;
+    padding: 1rem 1.5rem;
+    margin: 0 0 2.5rem 0;
+    background-color: #fcfbfa;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .card-memorial {
+    border-top: 3px solid #c9a050;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    position: relative;
+  }
+
+  .card-memorial h3 {
+    color: #2b2b2b;
+  }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8c6d2d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+</style>

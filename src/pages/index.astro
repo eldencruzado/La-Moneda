@@ -1,18 +1,92 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Bombardeo</title>
-	</head>
-	<body>
-		<h1>Bombardeo a la moneda</h1>
-		<p>Este grupo trabajará</p>
-		<p>Prueba de estado de conexión</p>
-	</body>
-</html>
+<Layout title="Inicio — Antecedentes del Golpe de 1973">
+  <section class="hero">
+    <h1>El Antecedente: Hacia el 11 de Septiembre</h1>
+    <p>El contexto político, económico y social que antecedió al quiebre democrático en Chile.</p>
+  </section>
+
+  <main>
+    <!-- Contenedor flexible de Texto + Imagen -->
+    <section class="intro-container">
+      <div class="intro-content">
+        <p class="intro-text">
+          A comienzos de la década de 1970, Chile atravesaba una severa polarización política y crisis económica. El gobierno de la Unidad Popular, liderado por Salvador Allende, buscó implementar la "vía chilena al socialismo" en el marco de tensiones internacionales provocadas por la Guerra Fría.
+        </p>
+        <p class="intro-text">
+          Las crecientes disputas entre el ejecutivo y la oposición, sumadas a la intervención extranjera y la crisis de abastecimiento, crearon un clima de alta tensión institucional que culminó en las acciones militares del 11 de septiembre.
+        </p>
+      </div>
+
+      <!-- Espacio reservado para la imagen 552 x 750 -->
+      <div class="image-wrapper">
+        <img 
+          src="/img/allende.png" 
+          alt="Fotografía histórica de los antecedentes del 11 de septiembre" 
+          width="552" 
+          height="750" 
+          class="featured-image"
+        />
+      </div>
+    </section>
+
+    <!-- Tarjetas de impacto -->
+    <div class="impact-grid">
+      <article class="card">
+        <h3>El Proyecto de la UP</h3>
+        <p>Nacionalización del cobre y reformas estructurales que provocaron el rechazo opositor y tensiones geopolíticas.</p>
+      </article>
+
+      <article class="card">
+        <h3>Crispación Social</h3>
+        <p>Escasez, inflación, desabastecimiento y paros gremiales que profundizaron la división en la ciudadanía.</p>
+      </article>
+
+      <article class="card">
+        <h3>Conspiración Militar</h3>
+        <p>Sectores de las Fuerzas Armadas y Carabineros coordinan el operativo para deponer al gobierno constitucional.</p>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Estilos específicos para la sección de la imagen en index */
+  .intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .intro-content .intro-text {
+    margin-bottom: 1.25rem;
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featured-image {
+    width: 100%;
+    max-width: 552px;
+    height: auto;
+    aspect-ratio: 552 / 750;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+  }
+
+  /* Disposición en 2 columnas para pantallas medianas/grandes */
+  @media (min-width: 850px) {
+    .intro-container {
+      grid-template-columns: 1fr 450px;
+    }
+  }
+</style>
